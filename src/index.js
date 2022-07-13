@@ -36,3 +36,9 @@ function markupOneCountry(data) {
             <p>Capital: <span>${country.capital}</span></p><p>Population: <span>${country.population }</span></p><p>Languages: <span>${Object.values(country.languages)}</span></p>`
     }).join('');
 }
+// Функція створює розмітку для 2-10 країн
+function markupMoreCountries(data) {
+    return data.map(country => {
+        return `<li class="country-list-item"><img src="${country.flags.svg}" alt="Flag" width="20" height="16"></img>${country.name.official}</li>`
+    }).join('');
+}
