@@ -42,3 +42,14 @@ function markupMoreCountries(data) {
         return `<li class="country-list-item"><img src="${country.flags.svg}" alt="Flag" width="20" height="16"></img>${country.name.official}</li>`
     }).join('');
 }
+// Функція, яка рендерить розмітку в залежності від кількості отриманих країн
+function renderMarkup(data) {
+    clearPage();
+    if (data.length === 1) {
+        refs.divInfo.insertAdjacentHTML('beforeend', markupOneCountry(data)) 
+    } else if (data.length > 1 && data.length <= 10) {
+        refs.ulList.insertAdjacentHTML('beforeend', markupMoreCountries(data))
+    } else if (data.length > 10){
+        Notify.info('Too many matches found. Please enter a more specific name.')
+    }
+}
