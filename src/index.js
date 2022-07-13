@@ -11,5 +11,7 @@ const refs = {
     ulList: document.querySelector(".country-list"),
     divInfo: document.querySelector('.country-info'),
 };
-// Создаём экземпляр класса CountriesService
+// Створюємо екземпляр класу CountriesService
 const countriesService = new CountriesService();
+// Додамо слухача на input
+refs.searchInput.addEventListener('input', debounce(onSearch, DEBOUNCE_DELAY));
