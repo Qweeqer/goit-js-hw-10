@@ -53,3 +53,8 @@ function renderMarkup(data) {
         Notify.info('Too many matches found. Please enter a more specific name.')
     }
 }
+// Функція для очищення розмітки
+function clearPage() {
+    refs.divInfo.innerHTML = '';
+    refs.ulList.innerHTML = '';
+}
