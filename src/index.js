@@ -1,11 +1,15 @@
 import './css/styles.css';
-import { fetchCountries } from './fetchCountries';
+import './css/styles.css';
+import {CountriesService} from './fetchCountries';
 import debounce from 'lodash.debounce';
-import Notiflix from 'notiflix';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const DEBOUNCE_DELAY = 300;
 
-const inputBox = document.querySelector('#search-box');
-console.log(inputBox);
-const countryList = document.querySelector('.country-list');
-console.log(countryList);
+const refs = {
+    searchInput: document.querySelector("#search-box"),
+    ulList: document.querySelector(".country-list"),
+    divInfo: document.querySelector('.country-info'),
+};
+// Создаём экземпляр класса CountriesService
+const countriesService = new CountriesService();
