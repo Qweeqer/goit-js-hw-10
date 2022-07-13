@@ -31,7 +31,7 @@ const handleError=()=>{
 // Функція, що створює розмітку для однієї країни
 function markupOneCountry(data) {
     return data.map(country => {
-        return `<img src="${country.flags.svg}" alt="Flag" width="30" height="24"></img>
+        return `<img src="${country.flags.svg}" alt="Flag" width="200" height="100"></img>
                 <h2 class="country-info-title">${country.name.official}</h2>
             <p>Capital: <span>${country.capital}</span></p><p>Population: <span>${country.population }</span></p><p>Languages: <span>${Object.values(country.languages)}</span></p>`
     }).join('');

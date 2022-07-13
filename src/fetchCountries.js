@@ -12,7 +12,8 @@ class CountriesService {
                 throw new Error(response.status);
             }
             return response.json();
-        })
+        })      
+  .catch(error => console.log(error))
     }
 }
 

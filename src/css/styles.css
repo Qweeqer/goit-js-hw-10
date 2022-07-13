@@ -16,5 +16,26 @@ body {
   font: inherit;
   padding: 8px;
   max-width: 320px;
+  margin-top: 20px;
   margin-bottom: 16px;
+  margin-left: 50px;
+}
+#search-box:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #bdbdbd;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+}
+.country-list{
+  margin-left: 50px;
+  list-style: decimal-leading-zero;
+}
+.country-list-item{
+margin-bottom: 16px;
+font-size: 16px;
+}
+.country-info{
+    margin-left: 50px;
+    font-size: 20px;
 }
