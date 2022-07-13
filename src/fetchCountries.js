@@ -13,7 +13,7 @@ class CountriesService {
             }
             return response.json();
         })      
-  .catch(error => console.log(error))
+//   .catch(error => console.log(error))
     }
 }
 
