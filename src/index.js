@@ -22,5 +22,9 @@ function onSearch(event) {
         return
     };
     countriesService.searchInput = event.target.value.trim();
-    // countriesService.fetchCountries().then(data => renderMarkup(data)).catch(handleError);
+    countriesService.fetchCountries().then(data => renderMarkup(data)).catch(handleError);
+}
+// Функція для повідомлення користувачу про помилку
+const handleError=()=>{
+    Notify.failure('Oops, there is no country with that name')
 }
